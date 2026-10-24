@@ -44,7 +44,7 @@ int32_t ShowMessageBox(uint32_t aType, const std::wstring_view aText, Args&&... 
 }
 
 template<typename... Args>
-void ShowLastErrorMessage(uint32_t aType, const std::wstring_view aAdditionalText = "", Args&&... aArgs)
+void ShowLastErrorMessage(uint32_t aType, const std::wstring_view aAdditionalText = L"", Args&&... aArgs)
 {
     auto msg = FormatLastError();
     if (!aAdditionalText.empty())
